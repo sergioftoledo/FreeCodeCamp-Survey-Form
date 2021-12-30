@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <header>
+        <h1 id="title">Encuesta para conocer quien es el mejor equipo de la década</h1>
+        <p id="description">Gracias por tomarse el tiempo de completar la encuesta</p>
+    </header>
+    <form id="survey-form">
+        <div class="campo-formulario">
+            <label for="nombre" id="name-label">Nombre</label>
+            <input class="controles-formulario" type="text" name="name" id="name" placeholder="Ingrese su nombre" required>
+        </div>
+        <div class="campo-formulario">
+            <label for="email" id="email-label">Email</label>
+            <input class="controles-formulario" type="email" name="email" id="email" placeholder="Ingrese su Email" required>
+        </div>
+        <div class="campo-formulario">
+            <label for="numero" id="number-label">Edad<span class="opcional">(Opcional)</span></label>
+            <input class="controles-formulario" type="number" name="number" id="number" placeholder="Ingrese su edad" min="10" max="99">
+        </div>
+        <div class="campo-formulario">
+            <p>Seleccione el equipo del cual es afisionado de estar en la siguiente lista</p>
+            <select value="equipo" id="dropdown" class="controles-formulario" required>
+                <option disabled selected>Seleccione su equipo favorito</option>
+                <option value="equipo">Barcelona</option>
+                <option value="equipo">Real Madrid</option>
+                <option value="equipo">Bayer Munich</option>
+                <option value="equipo">Manchester United</option>
+                <option value="equipo">Paris Saint Germain</option>
+                <option value="equipo">River Plate</option>
+                <option value="equipo">Boca Juniors</option>
+                <option value="equipo">Palmeiras</option>
+                <option value="no-quiero-decirlo">Prefiero no decirlo</option>
+            </select>
+            <div class="campo-formulario">
+                <p>Elija uno de los siguientes jugadores que concidere como el mejor del siglo</p>
+                <label class="label-jugador"><input class="input-jugador" name="jugador" type="radio" value="messi" checked>Messi</label>
+                <label class="label-jugador"><input class="input-jugador" name="jugador" type="radio" value="mbappe">Mbappe</label>
+                <label class="label-jugador"><input class="input-jugador" name="jugador" type="radio" value="cristiano">Cristiano Ronaldo</label>
+                <label class="label-jugador"><input class="input-jugador" name="jugador" type="radio" value="ronaldinho">Ronaldinho</label>
+                <label class="label-jugador"><input class="input-jugador" name="jugador" type="radio" value="ronaldo">Ronaldo (El fenomeno)</label>
+            </div>
+            <div class="campo-formulario">
+                <p class="opcional">Elija los equipos que tienen mas de 15 copas internacionales <span>(Selección multiple)</span></p>
+                <label class="label-jugador"><input class="input-jugador" value="equipo" type="checkbox">Manchester City</label>
+                <label class="label-jugador"><input class="input-jugador" value="equipo" type="checkbox">Milan</label>
+                <label class="label-jugador"><input class="input-jugador" value="juventus" type="checkbox">Juventus</label>
+                <label class="label-jugador"><input class="input-jugador" value="liverpool" type="checkbox">Liverpool</label>
+                <label class="label-jugador"><input class="input-jugador" value="marsella" type="checkbox">Marsella</label>
+                <label class="label-jugador"><input class="input-jugador" value="independiente" type="checkbox">Idependiente de Avellaneda</label>
+                <label class="label-jugador"><input class="input-jugador" value="barcelona" type="checkbox">Barcelona</label>
+                <label class="label-jugador"><input class="input-jugador" value="madrid" type="checkbox">Real Madrid</label>
+                <label class="label-jugador"><input class="input-jugador" value="river" type="checkbox">River Plate</label>
+            </div>
+            <div class="campo-formulario casilla-comentario">
+                <p>Aquí puede dejarnos su comentario</p>
+                <textarea name="mensaje" id="mensajes" placeholder="Aquí deje su mensaje" required></textarea>
+            </div>
+        </div>
+        <div class="campo-formulario">
+            <button type="submit" id="submit">
+              enviar
+            </button>
+          </div>
+    </form>
+    <!-- Testtable project FreeCodeCamp JS CDN -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
